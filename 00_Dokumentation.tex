@@ -1,0 +1,114 @@
+\documentclass[a4paper,12pt]{report}
+
+% Sprach- und Kodierungseinstellungen
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[ngerman]{babel}
+
+\usepackage{caption}
+\captionsetup{justification=centering}
+
+% Für Tabellen
+\usepackage{tabularx}
+% Refer to Chapter
+\usepackage{hyperref}
+
+% Typografische Verbesserungen
+\usepackage{lmodern}
+\let\CheckCommand\providecommand
+\usepackage[final,nopatch=footnote]{microtype}
+\usepackage{needspace}
+
+% Seitenränder und Layout
+\usepackage[left=2.5cm,right=2.5cm,top=3cm,bottom=3cm]{geometry}
+\setlength{\parindent}{0pt}
+
+\usepackage{setspace}
+\onehalfspacing
+
+\usepackage{enumitem}
+\usepackage{float}
+\usepackage{booktabs}
+\usepackage{tabularx}
+\usepackage{amsmath,amssymb}
+\usepackage[nottoc,notlof,notlot]{tocbibind}
+\usepackage{tcolorbox}
+\usepackage{xcolor}
+\usepackage{graphicx}
+\graphicspath{{./img/}}
+
+\usepackage{csquotes}
+
+% Kopf- und Fußzeilen
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[R]{\thepage}
+\fancyhead[L]{Krypto-Währungen: Staatliche Akzeptanz und gesellschaftliches Vertrauen}
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\footrulewidth}{0pt}
+\setlength{\headheight}{15pt}
+
+% Hyperlinks
+\usepackage{hyperref}
+\usepackage{url}
+\urlstyle{same}
+\hypersetup{
+    pdftitle={Krypto-Währungen: Staatliche Akzeptanz und gesellschaftliches Vertrauen im globalen Vergleich},
+    pdfauthor={Baitur Tashbaev, et.al},
+    pdfsubject={Krypto-Währungen: Staatliche Akzeptanz und gesellschaftliches Vertrauen im globalen Vergleich},
+    pdfkeywords={Crypto},
+    colorlinks=true,
+    linkcolor=blue,
+    citecolor=blue,
+    urlcolor=blue,
+    pdfpagemode=UseOutlines
+}
+
+% Vermeidung von Seitenumbrüchen bei Kapiteln
+\usepackage{etoolbox}
+\makeatletter
+\patchcmd{\chapter}{\clearpage}{}{}{}
+\makeatother
+
+\newenvironment{einleitung}{}{}
+\newenvironment{intro}{}{}
+% \newenvironment{kern}{}{}
+\newenvironment{interpretation}{}{}
+\newenvironment{zusammenfassung}{}{}
+
+% -------------------------------
+\begin{document}
+% Seiten ohne Kopf- und Fußzeile sowie Seitenzahl
+\pagestyle{empty}
+
+\include{01_Titel}
+
+\pagestyle{fancy}
+
+% Inhaltsverzeichnis
+\tableofcontents
+
+% Verzeichnis aller Bilder
+%\listoffigures
+
+% Verzeichnis aller Tabellen
+%\listoftables
+
+\include{02_Einleitung}
+
+\include{03_Intro}
+
+\include{04_Kern-Recherche}
+
+\include{05_Interpretation}
+
+\include{06_Zusammenfassung}
+
+\include{07_Literatur}
+
+% Literaturverzeichnis
+%\bibliographystyle{unsrtdin}
+%\bibliography{Literatur}
+
+\end{document}
