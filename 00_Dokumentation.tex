@@ -43,10 +43,11 @@
 \usepackage{fancyhdr}
 \pagestyle{fancy}
 \fancyhf{}
-\fancyhead[R]{\thepage}
-\fancyhead[L]{Krypto-Währungen: Staatliche Akzeptanz und gesellschaftliches Vertrauen}
+% \fancyhead[R]{\thepage}
+\fancyhead[L]{\leftmark}
 \renewcommand{\headrulewidth}{0.4pt}
 \renewcommand{\footrulewidth}{0pt}
+\fancyfoot[C]{\thepage}
 \setlength{\headheight}{15pt}
 
 % Hyperlinks
@@ -64,11 +65,6 @@
     urlcolor=blue,
     pdfpagemode=UseOutlines
 }
-
-\usepackage{tcolorbox}
-\usepackage{xcolor}
-\definecolor{lightblue}{rgb}{0.761, 0.827, 0.945}
-\definecolor{lightblue2}{rgb}{0.886, 0.918, 0.976}
 
 % Vermeidung von Seitenumbrüchen bei Kapiteln
 \usepackage{etoolbox}
@@ -91,11 +87,14 @@
 
 \pagestyle{fancy}
 
+\include{02_Abstract}
+
 % Inhaltsverzeichnis
 \tableofcontents
+\clearpage
 
 % Verzeichnis aller Bilder
-%\listoffigures
+\listoffigures
 
 % Verzeichnis aller Tabellen
 %\listoftables
@@ -110,7 +109,7 @@
 
 \include{05_Interpretation}
 
-\include{06_Zusammenfassung}
+\include{07_Fazit}
 
 \include{07_Literatur}
 
