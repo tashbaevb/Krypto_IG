@@ -66,6 +66,19 @@
     pdfpagemode=UseOutlines
 }
 
+\usepackage{titlesec}
+
+\titleformat{\chapter}[hang]
+{\normalfont\huge\bfseries}
+{\thechapter}
+{1em}
+{}
+
+\titlespacing*{\chapter}
+{0pt}   % links
+{0pt}   % oben
+{10pt}  % unten
+
 % Vermeidung von Seitenumbrüchen bei Kapiteln
 \usepackage{etoolbox}
 \makeatletter
