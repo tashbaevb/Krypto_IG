@@ -6,3 +6,6 @@
 *.synctex
 *.toc
 .DS_Store
+*.xml
+*.iml
+.idea
